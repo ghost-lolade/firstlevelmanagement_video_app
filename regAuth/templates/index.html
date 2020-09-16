@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body_block %}
+
+
+    {% if user.is_authenticated %}
+        <div class="row" style="padding-top:40px;">    
+          <div class="columns medium-12 small-centered">
+            <h4 class="float-left"><a href="#" style="color:#000;">First Level Maintenance</a> | <span data-title></span></h4>
+            <a href="#" class="float-right" style="margin-top:7px;">Hello {{ user.username }}</a>
+          </div>
+       </div>
+       <div id="videoGallery" class="video-gallery">
+        
+         <!-- Video -->
+         <div class="row" data-video-container style="display:none;">
+           <div class="columns medium-12">
+             <div class="flex-video widescreen">
+               <iframe data-video width="1600" height="900" src="" frameborder="0" allowfullscreen></iframe>
+             </div>
+           </div>
+         </div>
+        
+         
+         
+         
+         <!-- Thumbnails -->
+         <div id="thumbnails" class="list row small-up-1 medium-up-2 large-up-2">
+           <div class="column">
+            <video width="560" height="315" controls>
+              <source src="https://uhlng.com/flm/Receipt Printer_Introduction.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+               <span class="name"><strong>Introduction to the Referral Maker App</strong></span><br />
+               <span>10:00</span><br />
+               <span class="category">Getting Started</span>
+           </div>    
+           <div class="column">
+            <video width="560" height="315" controls>
+              <source src="https://uhlng.com/flm/Clamp training.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+               <span class="name"><strong>Introduction to the Referral Maker App</strong></span><br />
+               <span>10:00</span><br />
+               <span class="category">Getting Started</span>
+           </div>
+           
+           <div class="column">
+            <video width="560" height="315" controls>
+              <source src="https://uhlng.com/flm/out_2020-07-30-00-55-26.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+               <span class="name"><strong>Introduction to the Referral Maker App</strong></span><br />
+               <span>10:00</span><br />
+               <span class="category">Getting Started</span>
+           </div>    
+           <div class="column">
+            <video width="560" height="315" controls>
+              <source src="https://uhlng.com/flm/out_2020-07-30-00-50-54.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+               <span class="name"><strong>Introduction to the Referral Maker App</strong></span><br />
+               <span>10:00</span><br />
+               <span class="category">Getting Started</span>
+           </div>
+
+           <div class="column">
+            <video width="560" height="315" controls>
+              <source src="https://uhlng.com/flm/IMG_1532.MOV" type="video/MOV">
+              Your browser does not support the video tag.
+            </video>
+               <span class="name"><strong>Introduction to the Referral Maker App</strong></span><br />
+               <span>10:00</span><br />
+               <span class="category">Getting Started</span>
+           </div>
+           
+         </div><!-- End Row -->
+        
+       </div><!-- End search-results -->
+      </div>
+       
+       
+    {% else %}
+    <div class="container">
+        <h2>Login to get access to the FLM training or Create an account here</h2>
+    </div>
+    {% endif %}
+  </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.2.0/list.min.js"></script>
+<script src="https://cdn.jsdelivr.net/foundation/6.2.3/foundation.min.js"></script>
+{% endblock %}
